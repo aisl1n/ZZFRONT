@@ -1,21 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
+import { CATEGORIES } from "@/constants/categories";
 
 export default function Navbar() {
-  const categoriesNav = [
-    "novidades",
-    "sapatos",
-    "botas",
-    "acessórios",
-    "promoções",
-    "brizza",
-  ];
-
-  const categoryBrizza = categoriesNav.pop();
-  const categoriesWithoutBrizza = categoriesNav.filter(
-    (category) => category !== "brizza",
-  );
-
   return (
     <header>
       <nav className="flex h-[96px] w-full items-center justify-between bg-white px-8 text-black">
@@ -42,15 +29,14 @@ export default function Navbar() {
           </div>
 
           <ul className="hidden gap-6 px-10 text-[12px] lg:flex">
-            {categoriesWithoutBrizza.map((category) => (
-              <li key={category} className="py-1 uppercase">
+            {CATEGORIES.map((category) => (
+              <li
+                key={category}
+                className="border-gray-800 py-2 uppercase last:border-l last:pl-6"
+              >
                 <Link href="/">{category}</Link>
               </li>
             ))}
-            <div className="border-l border-gray-800"></div>
-            <li className="py-1 uppercase">
-              <Link href="/">{categoryBrizza}</Link>
-            </li>
           </ul>
         </div>
         <div className="flex gap-4">
