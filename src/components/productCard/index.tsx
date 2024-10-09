@@ -7,7 +7,7 @@ interface ProductCardProps {
 
 export default function ProductCard({ product }: ProductCardProps) {
   return (
-    <div className="w-full max-w-[391px]">
+    <div className="space-x- w-full max-w-full">
       <div className="relative aspect-[390/545] w-full">
         <Image
           className="object-cover"
@@ -18,7 +18,7 @@ export default function ProductCard({ product }: ProductCardProps) {
         />
       </div>
       <div className="mx-4 flex items-center justify-between py-4">
-        <h3 className="max-w-[60%] truncate text-ellipsis text-center text-xs">
+        <h3 className="flex-1 truncate text-ellipsis text-xs">
           {product.name}
         </h3>
         <p className="text-center text-xs font-bold">

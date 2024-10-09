@@ -10,7 +10,7 @@ export default function Navbar() {
           <div className="flex w-full justify-between">
             <Link href="/" className="flex lg:hidden">
               <Image
-                src="./assets/hamburgerMenu.svg"
+                src="/assets/hamburgerMenu.svg"
                 width={15}
                 height={15}
                 alt="menu amburger"
@@ -19,7 +19,7 @@ export default function Navbar() {
 
             <Link href="/" className="flex w-full justify-center lg:w-auto">
               <Image
-                src="./assets/zzlogo.svg"
+                src="/assets/zzlogo.svg"
                 width={97}
                 height={17}
                 className="min-h-[17px] min-w-[97px]"
@@ -42,7 +42,7 @@ export default function Navbar() {
         <div className="flex gap-4">
           <Link href="/" className="hidden items-center gap-2 lg:flex">
             <Image
-              src="./assets/local.svg"
+              src="/assets/local.svg"
               width={24}
               height={24}
               alt="icone de localização"
@@ -53,7 +53,7 @@ export default function Navbar() {
           </Link>
           <Link href="/" className="flex">
             <Image
-              src="./assets/heart.svg"
+              src="/assets/heart.svg"
               width={24}
               height={24}
               alt="icone de favoritos"
@@ -61,7 +61,7 @@ export default function Navbar() {
           </Link>
           <Link href="/" className="hidden lg:flex">
             <Image
-              src="./assets/profile.svg"
+              src="/assets/profile.svg"
               width={24}
               height={24}
               alt="icone de perfil"
@@ -69,7 +69,7 @@ export default function Navbar() {
           </Link>
           <Link href="/" className="flex">
             <Image
-              src="./assets/bag.svg"
+              src="/assets/bag.svg"
               width={24}
               height={24}
               alt="icone de sacola"

@@ -3,6 +3,7 @@ import { Product } from "@/types/products";
 import ProductCard from "../productCard";
 import { returnListOfProducts } from "@/utils";
 import { MAX_FIVE_PRODUCTS, RECOMMENDED_SECTION } from "./constants";
+import Link from "next/link";
 
 interface RecommendedSectionProps {
   data: Product[];
@@ -18,7 +19,9 @@ export default function RecommendedSection({ data }: RecommendedSectionProps) {
         <h2 className="text-2xl font-light uppercase tracking-widest">
           {TITLE}
         </h2>
-        <span className="py-6 text-xs uppercase underline">{SEE_ALL}</span>
+        <Link href="/c/sapatos/sandalias">
+          <span className="py-6 text-xs uppercase underline">{SEE_ALL}</span>
+        </Link>
       </div>
       <div className="grid grid-cols-2 gap-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
         {firstFive.map((product) => (
