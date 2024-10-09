@@ -2,10 +2,11 @@ import BannerCarousel from "@/components/bannerCarousel";
 import BannerCollections from "@/components/bannerCollections";
 import BannerPromotion from "@/components/bannerPromotion";
 import RecommendedSection from "@/components/recommendedSection";
+import { Product } from "@/types/products";
 import axios from "axios";
 
 interface HomeProps {
-  productsData: any[]; // Adjust the type according to your data structure
+  productsData: Product[];
 }
 
 export default function Home({ productsData }: HomeProps) {
