@@ -1,10 +1,9 @@
-export const COLLECTION_TITLE = "NOVA COLEÇÃO";
-
-export const COLLECTION_HASHTAG = "#LIVIAAREZZO";
-
-export const COLLECTION_INFO = "Conheça o novo coturno Livia Arezzo";
-
-export const COLLECTION_BUTTON_LABEL = "ver coleção";
+export const COLLECTION = {
+  TITLE: "NOVA COLEÇÃO",
+  HASHTAG: "#LIVIAAREZZO",
+  INFO: "Conheça o novo coturno Livia Arezzo",
+  BUTTON_LABEL: "ver coleção",
+};
 
 export const BANNER_LIVIAAREZZO = {
   id: 2,
