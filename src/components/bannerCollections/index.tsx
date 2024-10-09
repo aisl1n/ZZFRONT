@@ -10,7 +10,7 @@ import {
 
 export default function BannerCollections() {
   return (
-    <div className="mx-10 my-10 grid gap-2 md:mx-20 lg:grid-cols-[1fr_1fr_auto]">
+    <div className="mx-20 my-16 grid gap-2 md:mx-36 lg:grid-cols-[1fr_1fr_auto]">
       <div className="flex flex-col justify-between gap-4">
         <div>
           <p className="text-xs">{COLLECTION_TITLE}</p>
