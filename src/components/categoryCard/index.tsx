@@ -12,8 +12,8 @@ export default function CategoryCard({ category }: CategoryCardProps) {
         <Image
           src={category.imageUrl}
           alt={category.title}
-          layout="fill"
-          objectFit="contain"
+          fill
+          className="object-contain"
         />
       </div>
       <h3 className="mt-1 text-center font-light uppercase tracking-widest text-gray-600">
