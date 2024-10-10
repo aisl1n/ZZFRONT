@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import { fetchProducts } from "@/utils";
 import { Product } from "@/types/products";
@@ -10,6 +10,7 @@ import {
 import ProductCard from "@/components/productCard";
 import CategoryCard from "@/components/categoryCard";
 import { CATEGORY_CARD_DATA } from "@/components/categoryCard/constants";
+import Filter from "@/components/filter";
 
 const { HOME, SAPATOS, SANDALIAS } = BREADCRUMB_DATA;
 const { TITLE, DESCRIPTION } = CATEGORY_DATA;
@@ -30,6 +31,12 @@ export async function getServerSideProps() {
 }
 
 export default function Sandalias({ productsData }: SandaliasProps) {
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+
+  const toggleFilterOpen = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <div>
       <div className="flex gap-1 px-8 py-4 text-xs uppercase">
@@ -44,7 +51,10 @@ export default function Sandalias({ productsData }: SandaliasProps) {
       </div>
       <div className="flex gap-4 border-b border-t border-zinc-400 px-4 py-7">
         <div className="flex w-fit flex-col items-center justify-center">
-          <button className="flex justify-center gap-4 rounded-full border border-zinc-500 px-12 py-2">
+          <button
+            className="flex justify-center gap-4 rounded-full border border-zinc-500 px-12 py-2"
+            onClick={toggleFilterOpen}
+          >
             <Image
               src="/assets/filter.svg"
               width={24}
@@ -61,6 +71,13 @@ export default function Sandalias({ productsData }: SandaliasProps) {
           <span className="text-xs text-zinc-400">{DESCRIPTION}</span>
         </div>
       </div>
+
+      <Filter
+        productsData={productsData}
+        toggleFilterOpen={toggleFilterOpen}
+        showSideBar={isOpen}
+      />
+
       <div className="mx-4 mt-4 grid gap-1 sm:grid-cols-1 md:m-0 md:grid-cols-2 lg:grid-cols-3">
         {productsData.map((product) => (
           <ProductCard key={product.code} product={product} isPDC />
