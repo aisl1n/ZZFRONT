@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { CATEGORIES } from "@/constants/categories";
+import { CATEGORIES } from "./constants";
 
 export default function Navbar() {
   return (
@@ -28,7 +28,7 @@ export default function Navbar() {
             </Link>
           </div>
 
-          <ul className="hidden gap-6 px-10 text-[12px] lg:flex">
+          <ul className="hidden gap-6 px-10 text-xs lg:flex">
             {CATEGORIES.map((category) => (
               <li
                 key={category}
@@ -47,7 +47,7 @@ export default function Navbar() {
               height={24}
               alt="icone de localização"
             />
-            <span className="py-6 text-[12px] uppercase underline">
+            <span className="py-6 text-xs uppercase underline">
               ative sua localização
             </span>
           </Link>

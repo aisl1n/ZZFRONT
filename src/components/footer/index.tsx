@@ -1,4 +1,4 @@
-import { FOOTER_TEXT } from "@/constants/categories";
+import { FOOTER_TEXT } from "./constants";
 
 export default function Footer() {
   return (
