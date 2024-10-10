@@ -93,6 +93,7 @@ export enum ImageType {
 }
 
 export interface Category {
+  code?: string;
   title: string;
   imageUrl:   string;
 }
