@@ -1,22 +1,22 @@
 export const CATEGORY_CARD_DATA = [
   {
     title: "amarração",
-    imageUrl: "/assets/amarracao.png",
+    imageUrl: "/assets/amarracao.svg",
   },
   {
     title: "meia pata",
-    imageUrl: "/assets/meiapata.png",
+    imageUrl: "/assets/meiapata.svg",
   },
   {
     title: "geometrico",
-    imageUrl: "/assets/geometrico.png",
+    imageUrl: "/assets/geometrico.svg",
   },
   {
     title: "rasteira",
-    imageUrl: "/assets/rasteira.png",
+    imageUrl: "/assets/rasteira.svg",
   },
   {
     title: "anabela",
-    imageUrl: "/assets/anabela.png",
+    imageUrl: "/assets/anabela.svg",
   },
 ];

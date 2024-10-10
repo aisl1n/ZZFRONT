@@ -7,19 +7,18 @@ interface CategoryCardProps {
 
 export default function CategoryCard({ category }: CategoryCardProps) {
   return (
-    <div>
-      <div>
+    <div className="flex flex-shrink-1 flex-col items-center rounded-md border-2 p-4">
+      <div className="relative h-36 w-32">
         <Image
-          className="object-cover"
           src={category.imageUrl}
           alt={category.title}
-          width={100}
-          height={100}
+          layout="fill"
+          objectFit="contain"
         />
       </div>
-      <div className="mx-4 flex items-center justify-between py-4">
-        <h3 className="text-center text-xs uppercase font-light">{category.title}</h3>
-      </div>
+      <h3 className="mt-1 text-center font-light uppercase tracking-widest text-gray-600">
+        {category.title}
+      </h3>
     </div>
   );
 }
