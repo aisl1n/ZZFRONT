@@ -2,7 +2,7 @@ import React from "react";
 import { Product } from "@/types/products";
 import ProductCard from "../productCard";
 import { returnListOfProducts } from "@/utils";
-
+import Link from "next/link";
 import { MAX_PRODUCTS_TO_SHOW, RECOMMENDED_SECTION } from "./constants";
 
 interface RecommendedSectionProps {
