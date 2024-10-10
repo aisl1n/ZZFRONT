@@ -3,4 +3,4 @@ export const RECOMMENDED_SECTION = {
   SEE_ALL: "ver todos os produtos",
 }
 
-export const MAX_FIVE_PRODUCTS = 5;
+export const MAX_PRODUCTS_TO_SHOW = 5;
