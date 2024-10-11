@@ -3,7 +3,7 @@ import BannerCollections from "@/components/bannerCollections";
 import BannerPromotion from "@/components/bannerPromotion";
 import RecommendedSection from "@/components/recommendedSection";
 import { Product } from "@/types/products";
-import axios from "axios";
+import { fetchProducts } from "@/utils";
 
 interface HomeProps {
   productsData: Product[];
@@ -22,14 +22,9 @@ export default function Home({ productsData }: HomeProps) {
   );
 }
 
-export async function getStaticProps() {
-  let productsData = [];
-  try {
-    const res = await axios("http://localhost:3001/products");
-    productsData = await res.data;
-  } catch (error) {
-    console.error("Error fetching products data:", error);
-  }
+export async function getServerSideProps() {
+  const productsData = await fetchProducts();
+
   return {
     props: {
       productsData,

@@ -52,11 +52,9 @@ export interface Product {
   favorited:               boolean;
   hasPriceVariations:      boolean;
   hasVideo:                boolean;
-  imageColor:              ImageColor;
   images:                  Image[];
   legacySKU:               string;
   mobileStampImage:        string;
-  moreColors:              any[];
   name:                    string;
   price:                   Price;
   productType:             ProductType;
@@ -66,7 +64,6 @@ export interface Product {
   showVideoOnCategoryPage: boolean;
   sizesAvailabilityInfo:   SizesAvailabilityInfo[];
   stampImage:              string;
-  stock:                   ImageColor;
   url:                     string;
   variantOptions:          VariantOption[];
   volumePricesFlag:        boolean;
@@ -96,10 +93,9 @@ export enum ImageType {
 }
 
 export interface Category {
-  code: string;
-}
-
-export interface ImageColor {
+  code?: string;
+  title: string;
+  imageUrl:   string;
 }
 
 export interface Price {
