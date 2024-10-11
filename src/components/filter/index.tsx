@@ -27,9 +27,11 @@ export default function Filter({
     setOpenAccordion(openAccordion === accordion ? null : accordion);
   };
 
+  const isOpenClassName = showSideBar ? "translate-x-0" : "-translate-x-full";
+
   return (
     <div
-      className={`absolute left-0 z-20 h-screen w-2/3 bg-white shadow-md transition-transform duration-300 md:w-1/4 ${showSideBar ? "translate-x-0" : "-translate-x-full"}`}
+      className={`absolute left-0 z-20 h-screen w-2/3 bg-white shadow-md transition-transform duration-300 md:w-1/4 ${isOpenClassName}`}
     >
       <div className="px-8 py-4">
         <div className="flex justify-between">
