@@ -1,5 +1,6 @@
 import { Product } from "@/types/products";
 import Image from "next/image";
+import Link from "next/link";
 
 interface ProductCardProps {
   product: Product;
@@ -8,7 +9,7 @@ interface ProductCardProps {
 
 export default function ProductCard({ product, isPDC }: ProductCardProps) {
   return (
-    <div className="w-full max-w-full pb-8">
+    <Link href={`/p/${product.code}`} className="w-full max-w-full pb-8">
       <div className="relative aspect-[390/545] w-full">
         {isPDC && (
           <div className="absolute right-0 top-0 z-10">
@@ -36,14 +37,12 @@ export default function ProductCard({ product, isPDC }: ProductCardProps) {
           sizes="100vw"
         />
       </div>
-      <div className="mx-4 flex items-center justify-between py-4">
-        <h3 className="flex-1 truncate text-ellipsis text-xs">
-          {product.name}
-        </h3>
-        <p className="text-center text-xs font-bold">
+      <div className="flex items-center justify-between gap-2 px-4 py-4">
+        <h3 className="truncate text-ellipsis text-xs">{product.name}</h3>
+        <p className="text-nowrap text-xs font-bold">
           {product.price.formattedValue}
         </p>
       </div>
-    </div>
+    </Link>
   );
 }
